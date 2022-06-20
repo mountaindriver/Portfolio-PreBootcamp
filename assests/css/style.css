@@ -2,7 +2,7 @@
     --darkbluebar: #13293d;
     --white: #fff;
     --lightorange: #f8c685;
-
+    --black: #000;
 }
 
 
@@ -27,7 +27,8 @@ h1 {
 
 h2 {
     margin: 2% 0;
-    font-size: 180%;
+    font-size: 200%;
+    text-decoration: underline;
 }
 
 nav ul {
@@ -45,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--white);
+    color: var(--black);
     text-decoration: underline
 }
 
@@ -65,15 +66,29 @@ section {
     flex: 1 1 0;
     padding-right: 5%;
 }
-
+ /* Parent of sidebar, main */
 article {
-    border-bottom: 1px solid #d8a47f;
+    display: flex;
+    border-bottom: 2px solid #d8a47f;
+}
+
+article div {
+    flex: 5;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 article p {
     margin: 2% 0;
     font-size: 110%;
 }
+
+/* Sidebar */
+aside {
+    width: 25%;
+    flex: 1;
+}
+
 
 /* Underline, black text, grab cursor */
 span[data-descr] {
@@ -102,41 +117,35 @@ span[data-descr]:hover::after {
 .work {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.card {
-    flex: 1 0 400px;
 
+.card {
     text-align: start;
     border-style: solid;
     border-width: 2px;
     border-color: #000;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 } 
 
-.surfreport {
+.card:hover {
+    cursor: pointer;
     
 }
+
 
 /* how do I get the images to fill hte space? */
-.card img{
-    
-}
 
-aside {
-    width: 25%;
-}
-
-aside h2 {
-    font-size: 150%;
-}
 
 footer {
     display: flex;
     justify-content: center;
     padding: 2%;
     background-color: var(--darkbluebar);
-    color: var(--white);
+    color: var(--lightorange);
 }
 
 @media screen and (max-width: 768px) {
@@ -155,5 +164,24 @@ footer {
     aside {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    article {
+        flex-direction: column;
+    }
+    
+    *{
+        color: var(--white);
+        background-color: var(--black);
+    }
+
+    h1{
+        background-color: var(--darkbluebar);
+    }
+
+    header{
+        background-color: var(--darkbluebar);
     }
 }
