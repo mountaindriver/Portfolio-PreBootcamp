@@ -50,6 +50,14 @@ nav a:hover {
     text-decoration: underline
 }
 
+/* Profile photo */
+#profilephoto {
+    position: relative;
+    top: 20 px;
+    left: -5px;
+}
+
+
 /* decritive image */
 body image {
     max-height: 20px;
@@ -129,7 +137,13 @@ span[data-descr]:hover::after {
     align-items: center;
     align-content: center;
     text-align: center;
+    width: 500px;
 } 
+
+.surfreport {
+    width: 500px;
+    height: 400px;
+}
 
 .card:hover {
     cursor: pointer;
