@@ -1,8 +1,10 @@
 :root {
-    --darkbluebar: #13293d;
-    --white: #fff;
-    --lightorange: #f8c685;
-    --black: #000;
+    --clr-neautral-100: #fff;
+    --clr-neautral-900: #000;
+    --clr-bright-green: hsl(142, 90%, 61%);
+    --clr-dark-blue: #13293d;
+    --clr-light-orange: #f8c685;
+    --clr-orange: orange;
 }
 
 
@@ -10,15 +12,18 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
+    margin: 0;
 }
+
+/* Header & Navbar */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: var(--darkbluebar);
-    color: var(--lightorange);
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-light-orange);
 }
 
 h1 {
@@ -26,7 +31,7 @@ h1 {
 }
 
 h2 {
-    margin: 2% 0;
+    margin: 0;
     font-size: 200%;
     text-decoration: underline;
 }
@@ -39,16 +44,18 @@ nav ul {
 }
 
 nav a {
-    color: var(--lightorange);
+    color: var(--clr-light-orange);
     font-weight: bold;
     font-size: larger;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: var(--black);
+    color: var(--clr-orange);
     text-decoration: underline
 }
+/* Header & Navbar */
+
 
 /* Profile photo */
 #profilephoto {
@@ -58,52 +65,110 @@ nav a:hover {
 }
 
 
-/* decritive image */
+/* mountain landscape image */
 body image {
     max-height: 20px;
 }
 
+
+/* Main content */
 main {
     display: flex;
     flex: 1 1 0;
     max-width: 1200px;
-    margin: 2% auto;
 }
 
 section {
-    flex: 1 1 0;
+    flex:s s1 1 0;
     padding-right: 5%;
 }
- /* Parent of sidebar, main */
+
 article {
     display: flex;
     border-bottom: 2px solid #d8a47f;
 }
 
-article div {
-    flex: 5;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-article p {
-    margin: 2% 0;
-    font-size: 110%;
-}
 
-/* Sidebar */
+/* Sidebar (left)*/
 aside {
     width: 25%;
     flex: 1;
 }
 
 
-/* Underline, black text, grab cursor */
+
+/* Content (right) */
+article section {
+    flex: 5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 110%;
+}
+
+
+/* Showcase content */
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card {
+    color: var(--clr-neautral-100);
+    background-image: url(https://images.unsplash.com/photo-1655629887291-a2556feb366d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fGlVSXNuVnRqQjBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    padding: 10rem 0 0;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+
+}
+
+.card:hover {
+    transform: scale(1.02)
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neautral-900);
+    background-color: var(--clr-bright-green);
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+.big {
+    height: 300px;
+}
+/* Showcase */
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-light-orange);
+   
+}
+
+
+/* Underline, clr-neautral-900 text, grab cursor */
 span[data-descr] {
     position: relative;
     text-decoration: underline;
     color: #000;
-    cursor: grab;
+    cursor: pointer;
 }
 
 /* Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
@@ -113,58 +178,17 @@ span[data-descr]:hover::after {
     bottom: 0px;
     min-width: 200px;
     border: 1px #aaaaaa solid;
-    background-color: var(--darkbluebar);
+    background-color: var(--clr-dark-blue);
     font-weight: bold;
     padding: 12px;
-    color: var(--white);
+    color: var(--clr-neautral-100);
     font-size: 80%;
     z-index: 1;
 }
 
-/* Help with flexbot */
-.work {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
 
-
-.card {
-    text-align: start;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #000;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 500px;
-} 
-
-.surfreport {
-    width: 500px;
-    height: 400px;
-}
-
-.card:hover {
-    cursor: pointer;
-    
-}
-
-
-/* how do I get the images to fill hte space? */
-
-
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 2%;
-    background-color: var(--darkbluebar);
-    color: var(--lightorange);
-}
-
-@media screen and (max-width: 768px) {
-
-
+/* Responsive Design*/
+@media screen and (max-width: 650px) {
 
     header,
     main {
@@ -178,24 +202,5 @@ footer {
     aside {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    article {
-        flex-direction: column;
-    }
-    
-    *{
-        color: var(--white);
-        background-color: var(--black);
-    }
-
-    h1{
-        background-color: var(--darkbluebar);
-    }
-
-    header{
-        background-color: var(--darkbluebar);
     }
 }
