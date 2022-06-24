@@ -40,19 +40,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<<<<<<< HEAD
 
  `github_mountaindriver`, `Portfolio`,`linkedin_lucas-freigenberg`, `email_lsfreigenberg@outlook.com`,
-=======
-![screenshot of portfolio](/assests/images/Portfolio-screenshot.png)
-
-
- `github_mountaindriver`, `Portfolio`,`linkedin_lucas-freigenberg`, `email_lsfreigenberg@outlook.com`,
-
- This portfolio is to showcase my work, skills, and talent I have developed during my time in the University of Utah Coding Bootcamp.  The portfolio highlights my strong work and thought process completeing many projects and challengs that are applicable to real world sernarios. All of hte portfolios web applications will be live on the web and are that was to help me be succesful in my career.  
-
- Althought currently in this state there is still much more work adn additions to be make but I have completed the challenge by creating a HTML5 and CSS stylesheet with strong BONES.
->>>>>>> d156522616a98de971ce279a66d450cd10284af3
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -60,15 +49,9 @@
 
 ### Built With
 
-<<<<<<< HEAD
 * [HTML5](https://nextjs.org/)
 * [CSS](https://reactjs.org/)
 * [Java_script](https://vuejs.org/)
-=======
-* [HTML5]
-* [CSS]
-* [Java-Script]
->>>>>>> d156522616a98de971ce279a66d450cd10284af3
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

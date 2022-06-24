@@ -84,13 +84,13 @@ main {
 }
 
 section {
-    flex:s s1 1 0;
-    padding-right: 5%;
+    flex: 1 1 0;
 }
 
-article {
+article { 
     display: flex;
     border-bottom: 2px solid #d8a47f;
+    margin: 5%;
 }
 
 
