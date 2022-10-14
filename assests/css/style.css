@@ -1,5 +1,5 @@
 :root {
-    --clr-neautral-100: #fff;
+    --clr-neautral-100: rgb(255, 255, 255);
     --clr-neautral-900: #000;
     --clr-bright-green: hsl(142, 90%, 61%);
     --clr-dark-blue: #13293d;
